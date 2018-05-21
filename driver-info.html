@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>等待服务</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div class="mui-content driver-info-box">
+		    <div class="driver-info-card mui-card">
+				<div class="display-box driver-info-top">
+					<div class="avatar">
+						<i class="mui-icon mui-icon-person-filled"></i>
+					</div>
+					<div class="driver-info-right pr">
+						<div class="taxidrivers-info clearfix">
+							<span class="name fl">李师傅</span>
+							<span class="c-icon c-icon-star fl"></span>
+							<span class="fl pr-10">4.9</span>
+							<span class="fl">250单</span>
+						</div>
+						<div class="plate-number">粤G·GB345</div>
+						<div class="car-info">白色 <span>丰台卡罗拉</span></div>
+						<a href="tel:18680362842" class="mui-icon mui-icon-phone-filled"></a>
+					</div>
+				</div>
+				<div class="driver-info-bottom display-box clearfix mt-10">
+					<div class="txt span5">拼车人数差<span class="num">1</span>位</div>
+					<div class="txt span5">预计<span class="num">30</span>分钟接驾</div>
+				</div>
+				<!--不拼车显示-->
+				<div class="driver-info-bottom mt-10 dsnone">
+					<div class="tc txt">预计<span class="num">30</span>分钟到达接驾地点</div>
+				</div>
+				<!--end 不拼车显示-->
+			</div>
+			<div class="driver-prompt mui-card">
+				<p>系统正在努力匹配拼车乘客，请耐心等待。若您改变行程，可在<span class="date">12:05</span>分钟前免费取消订单</p>
+				<!--不拼车显示-->
+				<p class="dsnone">司机会提前到您预约地点为您接驾，记得接听司机电话哦！若您改变行程，可在<span class="date">12:05</span>分钟前免费取消订单</p>
+				<!--end 不拼车显示-->
+			</div>
+			<div class="btn-group display-box mui-text-center">
+				<div class="span5 btn-group-item"><a href="javascript:;" class="mui-btn mui-btn-grey mui-btn-block">取消订单</a></div>
+				<div class="span5 btn-group-item"><a href="javascript:;" class="mui-btn mui-btn-primary mui-btn-block">确认上车</a></div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+
+	<body>
+		<div class="navigator-wrapper">
+			<div class="navigator">
+				<div class="nav-wrapper shadow">
+					<div class="avatar-wrapper">
+						<div class="avatar"><i class="mui-icon mui-icon-person-filled"></i></div>
+					</div>
+					<div class="tab-wrapper">
+						<ul class="tab-list">
+							<li class="tab-item link-active" data-type="pc">
+								<a href="javascript:;" class="tab-name">拼车</a>
+							</li>
+							<li class="tab-item" data-type="yyc">
+								<a href="javascript:;" class="tab-name">预约车</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mui-content c-content">
+			<div class="taxi-page">
+				<div class="taxi-content">
+					<div class="taxi-location">
+						<div class="location">
+							<div class="location-item location-from location-item-inputed ">
+								<div id="startLocation" class="location-field border-bottom-1px">您在哪儿上车</div>
+							</div>
+							<div class="location-item location-to location-item-inputed ">
+								<div id="endLocation" class="location-field">你要去哪儿</div>
+							</div>
+						</div>
+					</div>
+					<div class="taxi-ride mui-text-center border-bottom-1px border-top-1px display-box ">
+						<div class="taxi-ride-num border-right-1px">
+							<i class="mui-icon mui-icon-person"></i>
+							<span id="ccrs">乘车人数</span>
+						</div>
+						<div class="taxi-ride-person">
+							<i class="mui-icon mui-icon-phone"></i>
+							<span id="phone">换乘车人</span>
+						</div>
+					</div>
+					<div class="taxi-eta mui-text-center border-bottom-1px">
+				      <span>“附近有10辆车可呼叫”</span>
+					</div>
+					<div class="taxi-price mt-20 display-box mui-text-center">
+						<div class="span5 carpool">
+							<span class="name">拼车</span>
+							<p class="taxi-price-num">高峰价<span>60</span>元</p>
+						</div>	
+						<div class="span5 notCarpool">
+							<span class="name">不拼车</span>
+							<p class="taxi-price-num">高峰价<span>110</span>元</p>
+						</div>	
+					</div>
+					<div class="taxi-send-btn">
+						<button type="button " class="mui-btn mui-btn-block mui-btn-primary ">呼叫拼车</button>
+					</div>
+					<div class="taxi-bottom display-box mui-text-center">
+						<div class="span5">
+							<a href="javascript:;">
+								<span class="radius-box mui-icon-extra mui-icon-extra-prech"></span>
+								<p>代金券</p>
+							</a>
+						</div>	
+						<div class="span5">
+							<a href="javascript:;">
+								<span class="radius-box mui-icon-extra mui-icon-extra-addpeople"></span>
+								<p>车主招募</p>
+							</a>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mapBox" id="mapBox">
+			<div class="mapSearch display-box">
+				<div class="inputBox"><input type="text" name="" id="inputAddress" value="" placeholder="你在哪儿上车"/></div>
+				<div class="cancelBox"><a href="javascript:;" class="cancel">取消</a></div>
+			</div>
+			<div id="allmap" class="allmap"></div>
+		</div>
+		<div class="login-popup-mask" ></div>
+		<div class="login-popup">
+			<div class="pop-slogin">
+				<div class="phone-wrapper">
+					<h2 class="title">输入验证码</h2>
+					<div class="phone">验证码已发送至18680362842</div>
+				</div>
+				<div class="user-input user-input-hook">
+					<span></span> <span></span> <span></span> <span></span>
+					<input type="number" maxlength="4">
+				</div>
+				<!--<div class="hidden-input"><input type="tel" maxlength="4" class="hidden-input-hook"></div>-->
+			</div>
+			<div class="close"><span></span></div>
+		</div>
+		<script type="text/javascript " src="js/lib/mui.min.js "></script>
+		<script type="text/javascript" src="js/lib/mui.picker.js" ></script>
+		<script type="text/javascript" src="js/lib/mui.poppicker.js" ></script>
+		<script type="text/javascript " src="js/lib/jquery.js "></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUHewhg0KDCnZa5emK9hxRib"></script>
+		<script type="text/javascript" src="js/map.js" ></script>
+		<script src="js/main.js "></script>
+		<script>
+			$(function(){
+				$('.login-popup input').on('keyup',function(){
+					var length =$(this).val().length;
+					if(length===4){
+						hideLogin();
+						window.location.href = 'protocol.html'
+					}
+				});
+			});
+		</script>
+	</body>
+
+</html>

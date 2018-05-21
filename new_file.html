@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>json数组合并去重</title>
+	</head>
+	<body>
+		<div id="txt"></div>
+		<script>
+			var a=[{"id":"1001","name":"张三","age":"18","address":"北京市朝阳区","school":"朝阳区第二中学"},{"id":"1002","name":"李四","age":"15","address":"北京市海淀区","school":"海淀区第二中学"},{"id":"1003","name":"王五","age":"16","address":"北京市石景山区","school":"石景山区第二中学"}];
+			var b=[{"id":"1004","name":"小毛","age":"18","address":"北京市朝阳区","school":"朝阳区第二中学"},{"id":"1003","name":"王五","age":"16","address":"北京市石景山区","school":"石景山区第二中学"}]
+			var c = a.concat(b); //合并数组
+			var temp = {}; //存放id
+			var result = []; //新数组
+			c.map((item,index) => {
+				if(!temp[item.id]){
+					result.push(item);
+					temp[item.id] = true;
+				}
+			})
+			document.getElementById('txt').innerHTML = JSON.stringify(result)
+		</script>
+	</body>
+</html>
