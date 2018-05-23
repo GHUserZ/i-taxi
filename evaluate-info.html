@@ -30,9 +30,55 @@
 				<p class="wxts">亲爱的老板您本次乘车目的地已到达，感谢再次乘坐旅程打车。祝您生活愉快！</p>
 			</div>
 			<!--评价-->
-			<div class="evaluate">
-				
+			<div class="evaluate-box">
+				<div class="title tc" >老板请对本次服务司机评价吧!</div>
+				<div class="evaluate">
+					<div class="evaluate-item clearfix">态度：<div class="rating fr" id = "rating"></div></div>
+					<div class="evaluate-item clearfix">技术：<div class="rating fr" id = "rating2"></div></div>
+					<div class="evaluate-item clearfix">卫生：<div class="rating fr" id = "rating3"></div></div>
+				</div>
+				<textarea rows="5" placeholder="老板说两句吧"></textarea>
+				<button class="mui-btn mui-btn-block mui-btn-primary">提交</button>
 			</div>
 		</div>
+		<script src="js/lib/jquery.js"></script>
+		<script type="text/javascript" src="js/lib/star.js" ></script>
+		<script>
+			$(function(){
+				//调用
+			   $('#rating').star({
+			      modus:'entire', //点亮模式
+			      total:5, //几颗星
+			      num:3, //默认点亮个数
+			      readOnly:false,//是否只读
+			      chosen:function(count,total){ //点击后禁止再选
+			      	console.log(count);//星数
+//			      	$('#rating').star('unbindEvent');//选中后禁用
+			      }
+			   });
+			   
+			   $('#rating2').star({
+			      modus:'entire', //点亮模式
+			      total:5, //几颗星
+			      num:0, //默认点亮个数
+			      readOnly:false,//是否只读
+			      chosen:function(count,total){ //点击后禁止再选
+			      	console.log(count);//星数
+//			      	$('#rating').star('unbindEvent');//选中后禁用
+			      }
+			   });
+			   
+			   $('#rating3').star({
+			      modus:'entire', //点亮模式
+			      total:5, //几颗星
+			      num:0, //默认点亮个数
+			      readOnly:false,//是否只读
+			      chosen:function(count,total){ //点击后禁止再选
+			      	console.log(count);//星数
+//			      	$('#rating').star('unbindEvent');//选中后禁用
+			      }
+			   });
+			});
+		</script>
 	</body>
 </html>
