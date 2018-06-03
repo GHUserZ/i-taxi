@@ -519,7 +519,7 @@ html {
     position: fixed;
     bottom: 20px;
     .btn-group-item{
-        padding: 0 30px;
+        padding: 0 10px;
     }
     .mui-btn{
         font-size: 14px;
@@ -557,7 +557,7 @@ p.wxts{
     cursor: pointer;
 }
 .evaluate-box{
-    padding: 0 30px;
+    padding: 0 10px;
     .title{
         font-size: 16px;
         color: $themeColor;
@@ -576,12 +576,15 @@ p.wxts{
 }
 //车主中心
 .owner-center-box{
-    position: absolute;
-    top: 0;
-    width: 100%;
+    display: flex;  
+    display: -webkit-flex;  
+    flex-direction: column;  
+    background-color: #fff;
     height: 100%;
-    .driver-info-card {
-        height: 86%;
+    .driver-info-card.mui-card { 
+        margin: 0;
+        box-shadow:none;
+        height: 100%;
     }
     .owner-serve-info {
         height: 100%;
@@ -591,9 +594,6 @@ p.wxts{
         position: absolute;
         left: -20px;
         top:-15px;
-    }
-    .btn-group-item{
-        padding:0 10px;
     }
     .grade{
         padding-top: 30px;
@@ -610,29 +610,112 @@ p.wxts{
        }
     }
     .serve-top{
-        height: 38%;
-        .span5{
-            font-size: 14px;
+        height:176px;
+        .txt{
+            font-size: 12px;
         }
     }
-    
+    .order-num,.price{
+        font-size: 16px;
+        color: $activeColor;
+    }
     .order-info{
         width: 90%;
-        height: 60%;
+        height: calc(100% - 250px);
+        height:-moz-calc(100% - 250px);   
+        height:-webkit-calc(100% - 250px);   
         margin: auto;
         border: 1px solid $baseColor;
         @include border_radius(2px);
+        overflow: auto;
         .noData{
             font-size: 14px;
             color: $baseColor;
             padding:20px;
         }
     }
-    .btn-group{
-        background-color: #fff;
-        bottom: 0;
-        padding-top: 10px;
-        height: 10%;
+}
+.fixed-btn-group{
+    box-shadow: 0 1px 2px rgba(0,0,0,.9);
+    background-color: #fff;
+    bottom: 0;
+    padding-top: 10px;
+    z-index: 9999;
+}
+.select-box {
+    .select{
+        padding: 0;
+        height: 30px;
+        font-size: 14px;
+        color: $themeColor;
+        padding-left: 10px;
+        border: 1px solid #dadada !important;
+    }
+}
+.c-icon-swap{
+    width: 32px;
+    height: 32px;
+    background: url(../img/icon/swap.png);
+}
+.c-icon-swap_small{
+    width: 28px;
+    height: 28px;
+    background: url(../img/icon/swap_small.png);
+}
+//路线设置
+.routeSet{
+    margin-bottom: 80px;
+    .mui-card-header{
+        &:after{
+            background-color: #fff;
+        }
+    }
+    .title-box{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        width: 190px;
+        height: 30px;
+        margin: auto;
+        line-height: 30px;
+        font-size: 14px;
+        color: #fff;
+        font-weight: normal;
+        margin: 0;
+    }
+    .title-inner{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 35px;
+        span{
+            display: inline-block;
+            height: 28px;
+            line-height: 28px;
+            overflow: hidden;
+        }
+    }
+    .otherRouterSet{
+        text-align: center;
+        margin: 0;
+    }
+    .bg{
+        border-top: 30px solid $activeColor;
+        border-right: 28px solid transparent;
+        border-bottom: 16px solid transparent;
+        border-left: 28px solid transparent;
+    }
+    .switch{
+        .txt{
+            font-size: 14px;
+            color: $themeColor;
+            line-height: 30px;
+        }
+    }
+    .mui-switch {
+        margin-left: 46px;
     }
 }
 /**

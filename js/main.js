@@ -5,6 +5,34 @@ mui('.taxi-ride').on('tap', '.taxi-ride-person', phoneDialog);
 mui('.cancelBox').on('tap', '.cancel', hideMap);
 mui('.navigator').on('tap', '.avatar', loginDialog);
 mui('.login-popup').on('tap', '.close', hideLogin);
+
+mui('#selectBox1').on('tap','.swap',function(){
+	var selectL =$(this).siblings().find('.selectL');
+	var selectR =$(this).siblings().find('.selectR');
+	var selectLVal =selectL.val();
+	var selectRVal =selectR.val();
+	selectL.val(selectRVal)
+	selectR.val(selectLVal)
+});
+
+mui('#selectBox2').on('tap','.swap',function(){
+	var selectL =$(this).siblings().find('.selectL');
+	var selectR =$(this).siblings().find('.selectR');
+	var selectLVal =selectL.val();
+	var selectRVal =selectR.val();
+	selectL.val(selectRVal)
+	selectR.val(selectLVal)
+});
+
+mui('#selectBox3').on('tap','.swap',function(){
+	var selectL =$(this).siblings().find('.selectL');
+	var selectR =$(this).siblings().find('.selectR');
+	var selectLVal =selectL.val();
+	var selectRVal =selectR.val();
+	selectL.val(selectRVal)
+	selectR.val(selectLVal)
+});
+
 //点击显示地图起始点
 $('body').delegate('#startLocation','touchend',function(){
 	showMap('startLocation');
